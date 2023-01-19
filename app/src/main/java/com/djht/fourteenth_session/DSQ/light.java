@@ -54,20 +54,19 @@ public class light extends AppCompatActivity implements View.OnClickListener{
 
             ImageView light_back= (ImageView) findViewById(R.id.light_back);
             light_back.setOnClickListener(this);
-
             ImageView light_add= (ImageView) findViewById(R.id.light_add);
             light_add.setOnClickListener(this);
-
+            //返回图标设置
             Resources r = this.getResources();
             @SuppressLint("ResourceType") InputStream is = r.openRawResource(R.mipmap.light_back);
             BitmapDrawable bmpview = new BitmapDrawable(is);
-            Bitmap bmp = Image_chage_D.createCircleImage(Image_chage_D.zoomImg(bmpview.getBitmap(),50,50));
+            Bitmap bmp = Image_chage_D.createCircleImage(Image_chage_D.zoomImg(bmpview.getBitmap(),40,40));
             light_back.setImageBitmap(bmp);
             Resources r1 = this.getResources();
-
+            //添加图标设置
             @SuppressLint("ResourceType") InputStream is1 = r1.openRawResource(R.mipmap.light_add);
             BitmapDrawable bmpview1 = new BitmapDrawable(is1);
-            Bitmap bmp1 = Image_chage_D.createCircleImage(Image_chage_D.zoomImg(bmpview1.getBitmap(),50,50));
+            Bitmap bmp1 = Image_chage_D.createCircleImage(Image_chage_D.zoomImg(bmpview1.getBitmap(),40,40));
             light_add.setImageBitmap(bmp1);
         }
     }

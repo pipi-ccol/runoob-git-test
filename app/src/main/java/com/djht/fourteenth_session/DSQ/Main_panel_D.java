@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.djht.fourteenth_session.Fragment.home_D;
 import com.djht.fourteenth_session.Fragment.setting_D;
@@ -29,6 +30,7 @@ public class Main_panel_D extends AppCompatActivity implements View.OnClickListe
     private ImageView home_icon;
     private ImageView setting_icon;
     private LinearLayout main_panel_top;
+    private TextView main_top_title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,15 +56,17 @@ public class Main_panel_D extends AppCompatActivity implements View.OnClickListe
 
         switch (i){
             case 0:
-                getSupportActionBar().show();
-                main_panel_top.setVisibility(View.GONE);
+                //getSupportActionBar().show();
+                //main_panel_top.setVisibility(View.GONE);
+                main_top_title.setText(R.string.app_name);
                 home_D home_Fragment=new home_D();
                 transaction.replace(R.id.New_main_Fragment,home_Fragment);
                 home_icon.setImageResource(R.mipmap.home_block);
                 break;
             case 1:
-                getSupportActionBar().hide();
-                main_panel_top.setVisibility(View.GONE);
+                //getSupportActionBar().hide();
+                //main_panel_top.setVisibility(View.VISIBLE);
+                main_top_title.setText("设置");
                 setting_D setting_Fragment=new setting_D();
                 transaction.replace(R.id.New_main_Fragment,setting_Fragment);
                 setting_icon.setImageResource(R.mipmap.setting_block);
@@ -107,6 +111,8 @@ public class Main_panel_D extends AppCompatActivity implements View.OnClickListe
         home_icon.setOnClickListener(this);
         setting_icon=findViewById(R.id.setting_icon);
         setting_icon.setOnClickListener(this);
+        main_top_title=findViewById(R.id.main_top_title);
+        main_top_title.setText(R.string.app_name);
 
         main_panel_top=findViewById(R.id.main_panel_top);
     }

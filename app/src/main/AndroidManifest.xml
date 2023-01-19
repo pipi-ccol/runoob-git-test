@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DSQ.light"></activity>
+        <activity android:name=".light_setting"></activity>
+        <activity android:name=".DSQ.light" />
         <activity
             android:name=".HJK.air_condition_main_h"
             android:exported="false"
