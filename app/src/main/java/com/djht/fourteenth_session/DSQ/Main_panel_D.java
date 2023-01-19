@@ -77,7 +77,6 @@ public class Main_panel_D extends AppCompatActivity implements View.OnClickListe
         transaction.commit();
     }
 
-
     /**
      * 点击切换监听函数
      * @param view

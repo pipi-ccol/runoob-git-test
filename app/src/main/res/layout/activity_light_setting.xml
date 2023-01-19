@@ -8,6 +8,7 @@
     tools:context=".light_setting">
 
     <FrameLayout
+        android:id="@+id/light_setting_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     </FrameLayout>

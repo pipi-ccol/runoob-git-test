@@ -8,8 +8,35 @@
     tools:context=".DSQ.light">
 
    <ScrollView
+       android:id="@+id/light_option"
        android:layout_width="match_parent"
        android:layout_height="match_parent">
+      <LinearLayout
+          android:padding="16dp"
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+         <Button
+             android:id="@+id/light_sitting_room"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+         </Button>
+         <Button
+             android:id="@+id/light_bedroom"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+         </Button>
+         <Button
+             android:id="@+id/light_kitchen"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+         </Button>
+         <Button
+             android:id="@+id/light_other_zone"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+         </Button>
+      </LinearLayout>
    </ScrollView>
 
 

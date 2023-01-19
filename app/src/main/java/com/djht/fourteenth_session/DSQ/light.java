@@ -5,6 +5,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Color;
@@ -13,11 +14,13 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.djht.fourteenth_session.R;
 import com.djht.fourteenth_session.Utils.Image_chage_D;
+import com.djht.fourteenth_session.light_setting;
 
 import java.io.InputStream;
 
@@ -25,6 +28,11 @@ public class light extends AppCompatActivity implements View.OnClickListener{
 
     private ImageView light_back;
     private ImageView light_add;
+    //按钮声明
+    private Button light_sitting_room;
+    private Button light_bedroom;
+    private Button light_kitchen;
+    private Button light_other_zone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,11 +81,28 @@ public class light extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     public void onClick(View view) {
+        Intent light_setting=new Intent(this, light_setting.class);
         switch (view.getId()){
             case R.id.light_back:
                 this.finish();
                 break;
             case R.id.light_add:
+                break;
+            case R.id.light_sitting_room:
+                light_setting.putExtra("page","light_sitting_room");
+                startActivity(light_setting);
+                break;
+            case R.id.light_bedroom:
+                light_setting.putExtra("page","light_bedroom");
+                startActivity(light_setting);
+                break;
+            case R.id.light_kitchen:
+                light_setting.putExtra("page","light_kitchen");
+                startActivity(light_setting);
+                break;
+            case R.id.light_other_zone:
+                light_setting.putExtra("page","light_other_zones");
+                startActivity(light_setting);
                 break;
             default:
                 break;
@@ -85,6 +110,13 @@ public class light extends AppCompatActivity implements View.OnClickListener{
     }
 
     private void initView() {
-
+        light_sitting_room=findViewById(R.id.light_sitting_room);
+        light_sitting_room.setOnClickListener(this);
+        light_bedroom=findViewById(R.id.light_bedroom);
+        light_bedroom.setOnClickListener(this);
+        light_kitchen=findViewById(R.id.light_kitchen);
+        light_kitchen.setOnClickListener(this);
+        light_other_zone=findViewById(R.id.light_other_zone);
+        light_other_zone.setOnClickListener(this);
     }
 }
