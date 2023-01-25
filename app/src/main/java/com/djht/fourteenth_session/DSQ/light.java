@@ -15,12 +15,10 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.djht.fourteenth_session.R;
 import com.djht.fourteenth_session.Utils.Image_chage_D;
-import com.djht.fourteenth_session.light_setting;
 
 import java.io.InputStream;
 

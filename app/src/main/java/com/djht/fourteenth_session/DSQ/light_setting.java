@@ -1,5 +1,6 @@
-package com.djht.fourteenth_session;
+package com.djht.fourteenth_session.DSQ;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -13,6 +14,7 @@ import com.djht.fourteenth_session.DSQ.Fragment.Other_zone;
 import com.djht.fourteenth_session.DSQ.Fragment.Sitting_room;
 import com.djht.fourteenth_session.Fragment.home_D;
 import com.djht.fourteenth_session.Fragment.setting_D;
+import com.djht.fourteenth_session.R;
 
 public class light_setting extends AppCompatActivity {
 
@@ -22,6 +24,9 @@ public class light_setting extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_light_setting);
+        //隐藏bar
+        ActionBar supportActionBar = getSupportActionBar();
+        supportActionBar.hide();
 
         initView();
 
