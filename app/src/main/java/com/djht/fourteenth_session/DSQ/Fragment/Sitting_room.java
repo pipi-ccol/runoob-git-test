@@ -16,7 +16,7 @@ public class Sitting_room extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.sitting_room, container, false);
+        View view = inflater.inflate(R.layout.sitting_room_d, container, false);
         return view;
     }
 

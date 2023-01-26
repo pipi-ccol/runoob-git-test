@@ -21,7 +21,7 @@ import com.djht.fourteenth_session.R;
 
 import java.io.InputStream;
 
-public class Main_panel_D extends AppCompatActivity implements View.OnClickListener{
+public class Main_panel_d extends AppCompatActivity implements View.OnClickListener{
 
     //程序退出时间控制
     private long exitTime = 0;

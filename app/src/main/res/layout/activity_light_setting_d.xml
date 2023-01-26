@@ -3,9 +3,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DSQ.light_setting">
+
+    <include
+        layout="@layout/setting_light_top_d">
+    </include>
 
     <FrameLayout
         android:id="@+id/light_setting_fragment"

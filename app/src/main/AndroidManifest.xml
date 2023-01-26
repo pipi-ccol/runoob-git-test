@@ -26,7 +26,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity android:name=".DSQ.Main_panel_D" />
+        <activity android:name=".DSQ.Main_panel_d" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

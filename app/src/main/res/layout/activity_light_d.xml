@@ -12,32 +12,36 @@
        android:layout_width="match_parent"
        android:layout_height="match_parent">
       <LinearLayout
-          android:padding="16dp"
+          android:layout_marginTop="40dp"
+          android:padding="20dp"
           android:orientation="vertical"
           android:layout_width="match_parent"
           android:layout_height="wrap_content">
          <Button
              android:id="@+id/light_sitting_room"
+             android:background="@drawable/setting_window_two_d"
              android:layout_width="match_parent"
              android:layout_height="match_parent">
          </Button>
          <Button
              android:id="@+id/light_bedroom"
+             android:background="@drawable/setting_window_two_d"
              android:layout_width="match_parent"
              android:layout_height="match_parent">
          </Button>
          <Button
              android:id="@+id/light_kitchen"
+             android:background="@drawable/setting_window_two_d"
              android:layout_width="match_parent"
              android:layout_height="match_parent">
          </Button>
          <Button
              android:id="@+id/light_other_zone"
+             android:background="@drawable/setting_window_two_d"
              android:layout_width="match_parent"
              android:layout_height="match_parent">
          </Button>
       </LinearLayout>
    </ScrollView>
-
 
 </LinearLayout>

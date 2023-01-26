@@ -11,7 +11,7 @@ import android.os.Message;
 import android.util.DisplayMetrics;
 import android.widget.ImageView;
 
-import com.djht.fourteenth_session.DSQ.Main_panel_D;
+import com.djht.fourteenth_session.DSQ.Main_panel_d;
 import com.djht.fourteenth_session.Utils.Get_image_D;
 import com.djht.fourteenth_session.Utils.Image_url;
 
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 //startActivity(new Intent(LoadPanel.this,MainActivity.class));
-                startActivity(new Intent(MainActivity.this, Main_panel_D.class));
+                startActivity(new Intent(MainActivity.this, Main_panel_d.class));
                 MainActivity.this.finish();
             }
         },time);

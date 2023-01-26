@@ -15,7 +15,7 @@ public class Other_zone extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.other_zone, container, false);
+        View view = inflater.inflate(R.layout.other_zone_d, container, false);
         return view;
     }
 

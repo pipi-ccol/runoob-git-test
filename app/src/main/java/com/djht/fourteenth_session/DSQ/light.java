@@ -35,7 +35,7 @@ public class light extends AppCompatActivity implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_light);
+        setContentView(R.layout.activity_light_d);
         initView();
     }
 
@@ -53,13 +53,15 @@ public class light extends AppCompatActivity implements View.OnClickListener{
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-            actionBar.setCustomView(R.layout.light_action_bar);
+            actionBar.setCustomView(R.layout.light_action_bar_d);
             Resources resources = light.this.getResources();
-            Drawable drawable = resources.getDrawable(R.drawable.light_action_bar);
+            Drawable drawable = resources.getDrawable(R.drawable.light_action_bar_d);
             actionBar.setBackgroundDrawable(drawable);
 
             ImageView light_back= (ImageView) findViewById(R.id.light_back);
             light_back.setOnClickListener(this);
+            Button light_noAll=(Button)findViewById(R.id.light_noAll);
+            light_noAll.setOnClickListener(this);
             ImageView light_add= (ImageView) findViewById(R.id.light_add);
             light_add.setOnClickListener(this);
             //返回图标设置
@@ -85,6 +87,10 @@ public class light extends AppCompatActivity implements View.OnClickListener{
                 this.finish();
                 break;
             case R.id.light_add:
+
+                break;
+            case R.id.light_noAll:
+
                 break;
             case R.id.light_sitting_room:
                 light_setting.putExtra("page","light_sitting_room");

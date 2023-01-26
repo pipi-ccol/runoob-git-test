@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,8 +21,8 @@ import com.djht.fourteenth_session.R;
 
 public class home_D extends Fragment implements View.OnClickListener{
 
-    private ImageButton main_light;
-    private ImageButton main_air_conditioning;
+    private ImageView main_light;
+    private ImageView main_air_conditioning;
 
     @Nullable
     @Override

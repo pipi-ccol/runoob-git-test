@@ -2,14 +2,14 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:textSize="40dp"
-        android:text="KKKKKKKKKKKKKKKKKKKKKKKKKK"
+    <ListView
+        android:id="@+id/kitchen_ListView"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    </TextView>
+    </ListView>
 
 </LinearLayout>
