@@ -5,10 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.annotation.SuppressLint;
-import android.content.res.Resources;
 import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -18,8 +15,6 @@ import android.widget.TextView;
 import com.djht.fourteenth_session.Fragment.home_D;
 import com.djht.fourteenth_session.Fragment.setting_D;
 import com.djht.fourteenth_session.R;
-
-import java.io.InputStream;
 
 public class Main_panel_d extends AppCompatActivity implements View.OnClickListener{
 
@@ -35,7 +30,7 @@ public class Main_panel_d extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main__panel__d);
+        setContentView(R.layout.activity_main_panel_d);
 
         //隐藏bar
         ActionBar supportActionBar = getSupportActionBar();

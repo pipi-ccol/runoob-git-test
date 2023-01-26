@@ -7,6 +7,8 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.djht.fourteenth_session.DSQ.Fragment.Bedroom;
@@ -15,10 +17,11 @@ import com.djht.fourteenth_session.DSQ.Fragment.Other_zone;
 import com.djht.fourteenth_session.DSQ.Fragment.Sitting_room;
 import com.djht.fourteenth_session.R;
 
-public class light_setting extends AppCompatActivity {
+public class light_setting extends AppCompatActivity implements View.OnClickListener{
 
     private String pageName;
     private TextView setting_light_top_title;
+    private ImageView setting_light_back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,8 @@ public class light_setting extends AppCompatActivity {
 
     private void initView() {
         setting_light_top_title=findViewById(R.id.setting_light_top_title);
+        setting_light_back=findViewById(R.id.setting_light_back);
+        setting_light_back.setOnClickListener(this);
         Intent intent=getIntent();
         pageName=intent.getStringExtra("page");
         //System.out.println(pageName);
@@ -79,4 +84,14 @@ public class light_setting extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.setting_light_back:
+                this.finish();
+                break;
+            default:
+                break;
+        }
+    }
 }

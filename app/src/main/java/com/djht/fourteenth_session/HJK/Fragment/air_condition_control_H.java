@@ -6,7 +6,6 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
-import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,7 +31,7 @@ public class air_condition_control_H extends Fragment implements View.OnClickLis
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view  = inflater.inflate(R.layout.air_condition_control__h, container, false);
+        View view  = inflater.inflate(R.layout.air_condition_control_h, container, false);
         on_off_btn = view.findViewById(R.id.on_off_btn);
         snow_btn = view.findViewById(R.id.snow_btn);
         heat_btn = view.findViewById(R.id.heat_btn);
