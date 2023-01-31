@@ -54,13 +54,9 @@ public class light_setting extends AppCompatActivity implements View.OnClickList
         FragmentTransaction transaction=fragmentManager.beginTransaction();
         switch (page){
             case "light_sitting_room":
-                //getSupportActionBar().show();
-                //main_panel_top.setVisibility(View.GONE);
-                //main_top_title.setText(R.string.app_name);
                 setting_light_top_title.setText("客厅");
                 Sitting_room sitting_room=new Sitting_room();
                 transaction.replace(R.id.light_setting_fragment,sitting_room);
-                //home_icon.setImageResource(R.mipmap.home_block);
                 break;
             case "light_bedroom":
                 setting_light_top_title.setText("卧室");
@@ -72,7 +68,7 @@ public class light_setting extends AppCompatActivity implements View.OnClickList
                 Kitchen kitchen=new Kitchen();
                 transaction.replace(R.id.light_setting_fragment,kitchen);
                 break;
-            case "light_other_zone":
+            case "light_other_zones":
                 setting_light_top_title.setText("其他");
                 Other_zone other_zone=new Other_zone();
                 transaction.replace(R.id.light_setting_fragment,other_zone);
