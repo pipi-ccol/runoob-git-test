@@ -83,6 +83,7 @@ public class light extends AppCompatActivity implements View.OnClickListener{
     public void onClick(View view) {
         Intent light_setting=new Intent(this, light_setting.class);
         switch (view.getId()){
+            //TODO:这里是写一键关闭和添加
             case R.id.light_back:
                 this.finish();
                 break;
