@@ -16,22 +16,32 @@ import com.djht.fourteenth_session.R;
 
 public class air_condition_control_H extends Fragment implements View.OnClickListener{
     static int on_off_state = 0;//默认未开机，以后可以传参进来初始化
-    View snow_btn;
-    View on_off_btn;
-    View heat_btn;
-    View air_improve_btn;
-    Button drop_temperature_btn;
-    Button add_temperature_btn;
-    TextView text_temperature;
-    View hight_wind_btn;
-    View mid_wind_btn;
-    View low_wind_btn;
-    View back_ground;
-    View back_btn;
+    private View snow_btn;
+    private View on_off_btn;
+    private View heat_btn;
+    private View air_improve_btn;
+    private Button drop_temperature_btn;
+    private Button add_temperature_btn;
+    private TextView text_temperature;
+    private View hight_wind_btn;
+    private View mid_wind_btn;
+    private View low_wind_btn;
+    private View back_ground;
+    private View back_btn;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view  = inflater.inflate(R.layout.air_condition_control_h, container, false);
+        init(view);
+        return view;
+    }
+
+    /**
+     * 初始化函数
+     * @param view
+     */
+    public void init(View view){
+        //默认未开机，开机键设置为黑色
         on_off_btn = view.findViewById(R.id.on_off_btn);
         snow_btn = view.findViewById(R.id.snow_btn);
         heat_btn = view.findViewById(R.id.heat_btn);
@@ -48,7 +58,6 @@ public class air_condition_control_H extends Fragment implements View.OnClickLis
         add_temperature_btn.setOnClickListener(this);
         drop_temperature_btn.setOnClickListener(this);
         back_btn.setOnClickListener(this);
-        //默认未开机，开机键设置为黑色
         GradientDrawable drawable =(GradientDrawable)on_off_btn.getBackground();
         int off_color = Color.rgb(0,0,0);
         drawable.setColor(off_color);
@@ -61,10 +70,7 @@ public class air_condition_control_H extends Fragment implements View.OnClickLis
         hight_wind_btn.setVisibility(View.INVISIBLE);
         mid_wind_btn.setVisibility(View.INVISIBLE);
         low_wind_btn.setVisibility(View.INVISIBLE);
-
-        return view;
     }
-
     @Override
     public void onClick(View view) {
         switch (view.getId()){
