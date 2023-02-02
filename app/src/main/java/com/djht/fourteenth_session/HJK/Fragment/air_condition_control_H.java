@@ -1,10 +1,14 @@
 package com.djht.fourteenth_session.HJK.Fragment;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,9 +16,11 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.djht.fourteenth_session.HJK.airRecyclerViewAdapter;
+import com.djht.fourteenth_session.HJK.air_condition_main_h;
 import com.djht.fourteenth_session.R;
 
-public class air_condition_control_H extends Fragment implements View.OnClickListener{
+public class air_condition_control_H extends Fragment implements View.OnClickListener {
     static int on_off_state = 0;//默认未开机，以后可以传参进来初始化
     private View snow_btn;
     private View on_off_btn;
@@ -23,11 +29,14 @@ public class air_condition_control_H extends Fragment implements View.OnClickLis
     private Button drop_temperature_btn;
     private Button add_temperature_btn;
     private TextView text_temperature;
+    private TextView condition_name;
     private View hight_wind_btn;
     private View mid_wind_btn;
     private View low_wind_btn;
     private View back_ground;
     private View back_btn;
+    private static int num;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -42,6 +51,7 @@ public class air_condition_control_H extends Fragment implements View.OnClickLis
      */
     public void init(View view){
         //默认未开机，开机键设置为黑色
+        condition_name = view.findViewById(R.id.air_conditon_control_name);
         on_off_btn = view.findViewById(R.id.on_off_btn);
         snow_btn = view.findViewById(R.id.snow_btn);
         heat_btn = view.findViewById(R.id.heat_btn);
@@ -70,6 +80,10 @@ public class air_condition_control_H extends Fragment implements View.OnClickLis
         hight_wind_btn.setVisibility(View.INVISIBLE);
         mid_wind_btn.setVisibility(View.INVISIBLE);
         low_wind_btn.setVisibility(View.INVISIBLE);
+        num = Integer.parseInt(getArguments().getString("num"));//获得list页面的参数
+//        System.out.println(num);
+        String itemNum = String.valueOf(num);
+        condition_name.setText(itemNum);
     }
     @Override
     public void onClick(View view) {
@@ -86,7 +100,8 @@ public class air_condition_control_H extends Fragment implements View.OnClickLis
                 changeState(view);
                 break;
             case R.id.back_btn:
-                getActivity().finish();
+                NavController nav = Navigation.findNavController(view);
+                nav.popBackStack();
                 break;
             default:
                 break;
@@ -147,5 +162,11 @@ public class air_condition_control_H extends Fragment implements View.OnClickLis
             mid_wind_btn.setVisibility(View.INVISIBLE);
             low_wind_btn.setVisibility(View.INVISIBLE);
         }
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
     }
 }
