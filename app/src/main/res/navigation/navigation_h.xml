@@ -2,4 +2,24 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/navigation"/>
+    android:id="@+id/nav_air_condition_control_to_list"
+    app:startDestination="@id/air_condition_list_H">
+    <fragment
+        android:id="@+id/air_condition_control_H"
+        android:name="com.djht.fourteenth_session.HJK.Fragment.air_condition_control_H"
+        android:label="air_condition_control_h"
+        tools:layout="@layout/air_condition_control_h" >
+        <action
+            android:id="@+id/action_air_condition_control_H_to_air_condition_list_H"
+            app:destination="@id/air_condition_list_H" />
+    </fragment>
+    <fragment
+        android:id="@+id/air_condition_list_H"
+        android:name="com.djht.fourteenth_session.HJK.Fragment.air_condition_list_H"
+        android:label="air_condition_list__h"
+        tools:layout="@layout/air_condition_list__h" >
+        <action
+            android:id="@+id/action_air_condition_list_H_to_air_condition_control_H"
+            app:destination="@id/air_condition_control_H" />
+    </fragment>
+</navigation>
