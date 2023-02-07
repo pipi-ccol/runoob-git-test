@@ -30,7 +30,6 @@ public class airRecyclerViewAdapter extends RecyclerView.Adapter<airRecyclerView
         this.context = context;
         this.itemList = itemList;
     }
-
     /**
      * 回调函数，在adpter与fragment之间进行传参
      * @param listener
