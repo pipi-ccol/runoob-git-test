@@ -16,7 +16,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
+import com.djht.fourteenth_session.DSQ.Dialog.CommonDialog;
+import com.djht.fourteenth_session.MainActivity;
 import com.djht.fourteenth_session.R;
 import com.djht.fourteenth_session.Utils.Image_chage_D;
 
@@ -88,7 +91,20 @@ public class light extends AppCompatActivity implements View.OnClickListener{
                 this.finish();
                 break;
             case R.id.light_add:
-
+                final CommonDialog dialog = new CommonDialog(light.this);
+                dialog.setTitle("加入智能灯");
+                dialog.setSingle(true).setOnClickBottomListener(new CommonDialog.OnClickBottomListener() {
+                    @Override
+                    public void onPositiveClick() {
+                        dialog.dismiss();
+                        Toast.makeText(light.this,dialog.getLight_name()+dialog.getLight_spinner(),Toast.LENGTH_SHORT).show();
+                    }
+                    @Override
+                    public void onNegtiveClick() {
+                        dialog.dismiss();
+                        Toast.makeText(light.this,"ssss",Toast.LENGTH_SHORT).show();
+                    }
+                }).show();
                 break;
             case R.id.light_noAll:
 
